@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podere Natura | Zeynep Su Öncel</title>
+    <meta name="description" content="Podere Natura Interior Concept - Zeynep Su Öncel">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Editorial layout overrides specific to Editorial Pages */
+        main {
+            padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .editorial-hero {
+            margin-top: 5rem; 
+            width: 100vw;
+            height: 90vh; 
+            overflow: hidden;
+        }
+
+        .full-bleed-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 70%; 
+        }
+
+        .editorial-intro {
+            max-width: var(--max-width);
+            margin: 8rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .intro-meta h5 {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--clr-text-secondary);
+            margin-bottom: 0.2rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .intro-meta p {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            font-family: var(--font-heading);
+            margin-top: 0.8rem;
+        }
+
+        .editorial-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 200;
+            margin-bottom: 3rem;
+            line-height: 1.1;
+        }
+
+        .intro-description p {
+            font-size: 1.25rem;
+            color: var(--clr-text-secondary);
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        .editorial-flow {
+            max-width: 1400px; 
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .image-block {
+            margin-bottom: 12rem; 
+            width: 100%;
+        }
+
+        .image-block img {
+            width: 100%;
+            height: auto;
+            display: block;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.03); 
+        }
+
+        .offset-right {
+            width: 75%;
+            margin-left: auto;
+        }
+
+        .offset-left-small {
+            width: 60%;
+            margin-right: auto;
+        }
+
+        .offset-center {
+            width: 80%;
+            margin: 0 auto 12rem auto;
+        }
+
+        .full-width {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%); 
+        }
+
+        .double-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .editorial-text-block {
+            max-width: 800px;
+            margin: 0 auto 12rem auto;
+            text-align: center;
+        }
+
+        .editorial-text-block p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: var(--clr-text-secondary);
+            font-style: italic; 
+            font-family: var(--font-heading);
+        }
+
+        .section-divider {
+            border: 0;
+            height: 1px;
+            background-color: rgba(0,0,0,0.1);
+            margin: 8rem auto 12rem auto;
+            width: 80%;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 2rem auto 8rem auto;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--clr-text-primary);
+            padding-bottom: 2px;
+            transition: color 0.3s ease;
+        }
+
+        @media (max-width: 900px) {
+            .editorial-intro {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin: 5rem auto;
+            }
+            .offset-right, .offset-left-small, .offset-center {
+                width: 100%;
+            }
+            .image-block, .editorial-text-block {
+                margin-bottom: 6rem;
+            }
+            .section-divider {
+                margin: 4rem auto 6rem auto;
+                width: 100%;
+            }
+            .double-col {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">ZSÖ</a>
+            <div class="nav-links">
+                <a href="index.html#hakkimda">Hakkımda</a>
+                <a href="index.html#projeler">Projeler</a>
+                <a href="index.html#deneyimler">Deneyimler</a>
+                <a href="index.html#yetenekler">Yetenekler</a>
+                <a href="index.html#iletisim">İletişim</a>
+                <div class="lang-toggle" style="margin-left: 1.5rem; border-left: 1px solid rgba(0,0,0,0.2); padding-left: 1.5rem; display: inline-flex; align-items: center;">
+                    <span style="font-weight: 500; font-size: 0.8rem; letter-spacing: 1px;">TR</span>
+                    <span style="opacity: 0.3; margin: 0 0.5rem;">/</span>
+                    <a href="podere_en.html" style="opacity: 0.5; font-size: 0.8rem; letter-spacing: 1px;">EN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="editorial-hero fade-in">
+            <img src="assets/podere/sunk in 1 - ps1.jpg" alt="Podere Natura Hero View" class="full-bleed-image">
+        </section>
+
+        <section class="editorial-intro fade-in delay-1">
+            <div class="intro-meta">
+                <h5>Proje</h5>
+                <p>Podere Natura</p>
+                <h5>Kategori</h5>
+                <p>İç Mekân (Interior Concept)</p>
+                <h5>Alan</h5>
+                <p>Residential (Konut)</p>
+            </div>
+            
+            <div class="intro-description">
+                <h1 class="editorial-title">Podere Natura</h1>
+                <p>Doğanın ritmine saygı duyan ve iç mekânı dış dünya ile bütünleştiren Podere Natura, Akdeniz mimarisinin sıcaklığını İskandinav sadeliğiyle harmanlayan kapsamlı bir konut projesidir. Tasarımın özünde yer alan doğal malzemeler, gün ışığı oyunları ve topoğrafyaya referans veren gömme (sunk-in) oturma alanları, mekânın köklü ve dingin karakterini vurgular.</p>
+            </div>
+        </section>
+
+        <section class="editorial-flow">
+            <!-- Zone 1: Living Area -->
+            <div class="image-block full-width fade-in-scroll">
+                <img src="assets/podere/living room 2 - color adjustments.jpg" alt="Living Room Wide Extent">
+            </div>
+
+            <div class="editorial-text-block fade-in-scroll">
+                <p>"Açık planlı yaşam alanları, gün ışığını maksimize edecek şekilde kurgulanmıştır. Ortak alanlarda kullanılan taş ve ahşap dokular, yeryüzünün organik renk paletini doğrudan içeri taşır."</p>
+            </div>
+
+            <div class="image-block offset-right fade-in-scroll">
+                <img src="assets/podere/kitchen large 2 - color adjustments.jpg" alt="Expansive Kitchen View">
+            </div>
+
+            <div class="image-block offset-left-small fade-in-scroll">
+                <img src="assets/podere/top view sunk in 2 - ps1.jpg" alt="Sunk in seating area top view">
+            </div>
+
+            <hr class="section-divider fade-in-scroll">
+
+            <!-- Zone 2: Private Quarters -->
+            <div class="image-block double-col fade-in-scroll">
+                <img src="assets/podere/bedrrom nighttime - ps5.jpg" alt="Bedroom Evening Atmosphere">
+                <img src="assets/podere/bedroom close up 5.jpg" alt="Bedroom Detailed Finishes">
+            </div>
+
+            <div class="image-block offset-center fade-in-scroll" style="width: 65%;">
+                <img src="assets/podere/bedrrom seating 4.jpg" alt="Bedroom Lounge Seating">
+            </div>
+
+            <div class="image-block offset-right fade-in-scroll">
+                <img src="assets/podere/walk-in-closet 1.jpg" alt="Bespoke Walk-in Closet">
+            </div>
+
+            <div class="editorial-text-block fade-in-scroll">
+                <p>"Mahrem alanlar, derinleşen ton paleti ve dokunsal yüzeylerle sakinleşmeye davet eder. Ev-ofis bölümünde ise fonksiyonellik, minimalist detaylarla kesintiye uğramadan çalışma alanına zarafet katar."</p>
+            </div>
+
+            <div class="image-block double-col fade-in-scroll">
+                <img src="assets/podere/office main unit 1 - ps3.jpg" alt="Office Built-ins">
+                <img src="assets/podere/office wall 1 - ps2.jpg" alt="Office Paneling Finishes">
+            </div>
+
+            <hr class="section-divider fade-in-scroll">
+
+            <!-- Zone 3: Solitude -->
+            <div class="image-block offset-left-small fade-in-scroll">
+                <img src="assets/podere/bathtub with mirror reflection ps1.jpg" alt="Bathtub View with Reflection">
+            </div>
+
+            <div class="image-block double-col fade-in-scroll">
+                <img src="assets/podere/bathroom sink 1 with mirror reflection ps2.jpg" alt="Bathroom Sink Geometry">
+                <img src="assets/podere/bathroom close up 3.jpg" alt="Bathroom Finishes Close Up">
+            </div>
+
+            <div class="image-block offset-center fade-in-scroll" style="width: 85%;">
+                <img src="assets/podere/cinema room 2.jpg" alt="Private Cinema Room">
+            </div>
+
+            <div style="text-align: center;">
+                <a href="index.html#projeler" class="back-link">← Projelere Dön</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Zeynep Su Öncel. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

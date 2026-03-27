@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marciano by GUESS | Zeynep Su Öncel</title>
+    <meta name="description" content="Marciano by GUESS Retail Project - Zeynep Su Öncel">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Editorial layout overrides specific to Marciano */
+        main {
+            padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .editorial-hero {
+            margin-top: 5rem; /* Account for fixed navbar */
+            width: 100vw;
+            height: 90vh; /* Large impactful hero */
+            overflow: hidden;
+        }
+
+        .full-bleed-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%; /* Adjust if needed */
+        }
+
+        .editorial-intro {
+            max-width: var(--max-width);
+            margin: 8rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .intro-meta h5 {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--clr-text-secondary);
+            margin-bottom: 0.2rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .intro-meta p {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            font-family: var(--font-heading);
+            margin-top: 0.8rem;
+        }
+
+        .editorial-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 200;
+            margin-bottom: 3rem;
+            line-height: 1.1;
+        }
+
+        .intro-description p {
+            font-size: 1.25rem;
+            color: var(--clr-text-secondary);
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        .editorial-flow {
+            max-width: 1400px; /* Slightly wider than standard container to allow offset images breathing room */
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .image-block {
+            margin-bottom: 12rem; /* The Norm space feeling */
+            width: 100%;
+        }
+
+        .image-block img {
+            width: 100%;
+            height: auto;
+            display: block;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.03); /* Extremely subtle shadow for depth */
+        }
+
+        /* Offset positioning classes */
+        .offset-right {
+            width: 75%;
+            margin-left: auto;
+        }
+
+        .offset-left-small {
+            width: 60%;
+            margin-right: auto;
+        }
+
+        .offset-center {
+            width: 80%;
+            margin: 0 auto 12rem auto;
+        }
+
+        .full-width {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%); /* Pulls item full bleed out of container horizontally */
+        }
+
+        .double-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .editorial-text-block {
+            max-width: 800px;
+            margin: 0 auto 12rem auto;
+            text-align: center;
+        }
+
+        .editorial-text-block p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: var(--clr-text-secondary);
+            font-style: italic; /* A quote-like highlight block */
+            font-family: var(--font-heading);
+        }
+
+        .sub-project-intro {
+            margin-bottom: 5rem;
+        }
+
+        .sub-project-intro p {
+            font-style: normal;
+            font-family: var(--font-body);
+            font-size: 1.15rem;
+        }
+
+        .sub-project-label {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--clr-text-secondary);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .sub-project-heading {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .sub-project-image-block {
+            width: 85%;
+            margin: 0 auto 8rem auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 2rem auto 8rem auto;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--clr-text-primary);
+            padding-bottom: 2px;
+            transition: color 0.3s ease;
+        }
+
+        @media (max-width: 900px) {
+            .editorial-intro {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin: 5rem auto;
+            }
+            .offset-right, .offset-left-small, .offset-center, .sub-project-image-block {
+                width: 100%;
+            }
+            .image-block, .editorial-text-block {
+                margin-bottom: 6rem;
+            }
+            .double-col {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">ZSÖ</a>
+            <div class="nav-links">
+                <a href="index_en.html#about">About</a>
+                <a href="index_en.html#projects">Projects</a>
+                <a href="index_en.html#experience">Experience</a>
+                <a href="index_en.html#skills">Skills</a>
+                <a href="index_en.html#contact">Contact</a>
+                <div class="lang-toggle" style="margin-left: 1.5rem; border-left: 1px solid rgba(0,0,0,0.2); padding-left: 1.5rem; display: inline-flex; align-items: center;">
+                    <a href="marciano.html" style="opacity: 0.5; font-size: 0.8rem; letter-spacing: 1px;">TR</a>
+                    <span style="opacity: 0.3; margin: 0 0.5rem;">/</span>
+                    <span style="font-weight: 500; font-size: 0.8rem; letter-spacing: 1px;">EN</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="editorial-hero fade-in">
+            <img src="assets/marciano/doorway to lounge side.jpg" alt="Marciano Hero View" class="full-bleed-image">
+        </section>
+
+        <section class="editorial-intro fade-in delay-1">
+            <div class="intro-meta">
+                <h5>Project</h5>
+                <p>Marciano by GUESS</p>
+                <h5>Category</h5>
+                <p>Retail Concept</p>
+                <h5>Discipline</h5>
+                <p>Interior & Spatial Design</p>
+            </div>
+            
+            <div class="intro-description">
+                <h1 class="editorial-title">Marciano by GUESS</h1>
+                <p>Conceived as a sanctuary of refined elegance within the bustling environment of luxury retail, the Marciano by GUESS project investigates the delicate equilibrium between Mediterranean warmth and minimalist restraint. The spatial arrangement is orchestrated with a deliberate rhythm, utilizing soft illumination and high-end material selections to accentuate the quality of the garments while offering the visitor a tactile, serene experience.</p>
+            </div>
+        </section>
+
+        <section class="editorial-flow">
+            <!-- Asymmetrical Flow -->
+            <div class="image-block offset-right fade-in-scroll">
+                <img src="assets/marciano/lounge area 1.jpg" alt="Lounge Area">
+            </div>
+
+            <!-- Vertical Image Duo -->
+            <div class="image-block double-col fade-in-scroll">
+                <img src="assets/marciano/intro 01.jpg" alt="Interior Detail 1">
+                <img src="assets/marciano/intro alternative 2.jpg" alt="Interior Detail 2">
+            </div>
+
+            <div class="editorial-text-block fade-in-scroll">
+                <p>"The lounge and checkout zones serve as the fundamental anchors of the space. The contrast established between deep walnut tones, brushed brass detailing, and softly textured stone walls creates a timeless, haptic backdrop."</p>
+            </div>
+
+            <!-- Full width horizontal bleeding out of typical flow -->
+            <div class="image-block full-width fade-in-scroll">
+                <img src="assets/marciano/cash area.jpg" alt="Cash Area">
+            </div>
+
+            <div class="image-block offset-left-small fade-in-scroll">
+                <img src="assets/marciano/changing room areas 1.jpg" alt="Changing Room">
+            </div>
+
+            <div class="image-block offset-right fade-in-scroll">
+                <img src="assets/marciano/display units and wall racks in the main area.jpg" alt="Display units">
+            </div>
+
+            <div class="image-block offset-center fade-in-scroll" style="margin-bottom: 6rem;">
+                <img src="assets/marciano/lounge otherway.jpg" alt="Lounge Alternative View">
+            </div>
+
+            <hr style="border: 0; height: 1px; background-color: rgba(0,0,0,0.1); margin: 6rem auto;">
+
+            <!-- Store in store section -->
+            <div class="fade-in-scroll">
+                <div class="editorial-text-block sub-project-intro">
+                    <h5 class="sub-project-label">Secondary Concept</h5>
+                    <h2 class="sub-project-heading">Store-in-Store Design</h2>
+                    <p>An independent "store-in-store" exhibition area that seamlessly integrates with the overarching design trajectory while structurally maintaining its own distinct identity. A central minimalist wooden podium serves as a focal point for capsule collections, guiding the visitor's journey.</p>
+                </div>
+
+                <div class="image-block sub-project-image-block">
+                    <img src="assets/store_in_store/no bg sis store.png" alt="Store-in-store Concept">
+                </div>
+                
+                <div class="image-block offset-right fade-in-scroll">
+                    <img src="assets/store_in_store/no bg sis store 2.png" alt="Store in Store Alternative View">
+                </div>
+
+                <div class="image-block offset-center fade-in-scroll">
+                    <img src="assets/store_in_store/sis axo with notes.png" alt="Axonometric Diagram with Notes">
+                </div>
+
+                <div class="editorial-text-block fade-in-scroll">
+                    <p>"The transparency of details and brushed metal finishes advocate for the idea that even temporary capsule exhibition spaces must possess a lasting architectural quality."</p>
+                </div>
+
+                <div class="editorial-text-block fade-in-scroll" style="margin-bottom: 5rem; text-align: center;">
+                    <br>
+                    <a href="assets/store_in_store/Plan with Dimensions.pdf" target="_blank" class="btn btn-outline">View Technical Plan (PDF)</a>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="index_en.html#projects" class="back-link">← Back to Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Zeynep Su Öncel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

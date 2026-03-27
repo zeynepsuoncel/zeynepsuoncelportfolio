@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bereket Panel | Zeynep Su Öncel</title>
+    <meta name="description" content="Bereket Panel Surface Design - Zeynep Su Öncel">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Editorial layout overrides specific to Editorial Pages */
+        main {
+            padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        .editorial-hero {
+            margin-top: 5rem; 
+            width: 100vw;
+            height: 90vh; 
+            overflow: hidden;
+        }
+
+        .full-bleed-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 60%; 
+        }
+
+        .editorial-intro {
+            max-width: var(--max-width);
+            margin: 8rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .intro-meta h5 {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--clr-text-secondary);
+            margin-bottom: 0.2rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .intro-meta p {
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            font-family: var(--font-heading);
+            margin-top: 0.8rem;
+        }
+
+        .editorial-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 200;
+            margin-bottom: 3rem;
+            line-height: 1.1;
+        }
+
+        .intro-description p {
+            font-size: 1.25rem;
+            color: var(--clr-text-secondary);
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        .editorial-flow {
+            max-width: 1400px; 
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .image-block {
+            margin-bottom: 12rem; 
+            width: 100%;
+        }
+
+        .image-block img {
+            width: 100%;
+            height: auto;
+            display: block;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.03); 
+        }
+
+        .offset-right {
+            width: 75%;
+            margin-left: auto;
+        }
+
+        .offset-center {
+            width: 80%;
+            margin: 0 auto 12rem auto;
+        }
+
+        .editorial-text-block {
+            max-width: 800px;
+            margin: 0 auto 12rem auto;
+            text-align: center;
+        }
+
+        .editorial-text-block p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: var(--clr-text-secondary);
+            font-style: italic; 
+            font-family: var(--font-heading);
+        }
+
+        .section-divider {
+            border: 0;
+            height: 1px;
+            background-color: rgba(0,0,0,0.1);
+            margin: 8rem auto 12rem auto;
+            width: 80%;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 2rem auto 8rem auto;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--clr-text-primary);
+            padding-bottom: 2px;
+            transition: color 0.3s ease;
+        }
+
+        @media (max-width: 900px) {
+            .editorial-intro {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin: 5rem auto;
+            }
+            .offset-right, .offset-center {
+                width: 100%;
+            }
+            .image-block, .editorial-text-block {
+                margin-bottom: 6rem;
+            }
+            .section-divider {
+                margin: 4rem auto 6rem auto;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">ZSÖ</a>
+            <div class="nav-links">
+                <a href="index.html#hakkimda">Hakkımda</a>
+                <a href="index.html#projeler">Projeler</a>
+                <a href="index.html#deneyimler">Deneyimler</a>
+                <a href="index.html#yetenekler">Yetenekler</a>
+                <a href="index.html#iletisim">İletişim</a>
+                <div class="lang-toggle" style="margin-left: 1.5rem; border-left: 1px solid rgba(0,0,0,0.2); padding-left: 1.5rem; display: inline-flex; align-items: center;">
+                    <span style="font-weight: 500; font-size: 0.8rem; letter-spacing: 1px;">TR</span>
+                    <span style="opacity: 0.3; margin: 0 0.5rem;">/</span>
+                    <a href="bereket_en.html" style="opacity: 0.5; font-size: 0.8rem; letter-spacing: 1px;">EN</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="editorial-hero fade-in">
+            <img src="assets/bereket/Introduction Picture to the Project - Bereket.jpg" alt="Bereket Design Hero View" class="full-bleed-image">
+        </section>
+
+        <section class="editorial-intro fade-in delay-1">
+            <div class="intro-meta">
+                <h5>Proje</h5>
+                <p>Bereket Panel</p>
+                <h5>Kategori</h5>
+                <p>Surface & Pattern (Yüzey Tasarımı)</p>
+                <h5>Materyal</h5>
+                <p>Bespoke Relief</p>
+            </div>
+            
+            <div class="intro-description">
+                <h1 class="editorial-title">Bereket Panel</h1>
+                <p>Geleneksel motiflerin çağdaş bir mekân okumasıyla yeniden yorumlandığı Bereket Paneli, yüzey tasarımını salt bir kaplama olmaktan çıkararak mekânın heykelsi bir odak noktası haline getiriyor. Akdeniz kimliğinin organik ve bereketli formlarını, minimalist bir strüktür içerisine yerleştirerek geçmiş ile gelecek arasında sessiz ve dokunsal bir diyalog kuruyor.</p>
+            </div>
+        </section>
+
+        <section class="editorial-flow">
+            <!-- Pattern Detail -->
+            <div class="image-block offset-right fade-in-scroll">
+                <img src="assets/bereket.jpg" alt="Bereket Pattern Geometry Detail">
+            </div>
+
+            <div class="editorial-text-block fade-in-scroll">
+                <p>"Yüzeydeki dokunsal rölyefler, doğal ışığın gün içindeki hareketiyle birlikte sürekli değişen bir derinlik algısı yaratır. Panel, salt dekoratif bir unsur olmanın ötesinde duvar yüzeyine kendi mimarisini katar."</p>
+            </div>
+
+            <hr class="section-divider fade-in-scroll">
+
+            <!-- Alternate Rendering/View -->
+            <div class="image-block offset-center fade-in-scroll" style="width: 75%; max-width: 1000px;">
+                <img src="assets/bereket/02.jpg" alt="Bereket Panel Presentation View">
+            </div>
+
+            <div style="text-align: center;">
+                <a href="index.html#projeler" class="back-link">← Projelere Dön</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Zeynep Su Öncel. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
