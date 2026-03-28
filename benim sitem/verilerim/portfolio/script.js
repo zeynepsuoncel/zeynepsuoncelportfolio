@@ -104,4 +104,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
         startSlider(); // Start the loop immediately
     }
+
+    // Printed Portfolio Slideshow
+    const pSlides = document.querySelectorAll('.p-slide');
+    const pBtnPrev = document.getElementById('p-slider-prev');
+    const pBtnNext = document.getElementById('p-slider-next');
+
+    if (pSlides.length > 0) {
+        let currentPSlideIndex = 0;
+        let pSlideInterval;
+
+        const goToPSlide = (index) => {
+            pSlides[currentPSlideIndex].classList.remove('p-slide-active');
+            pSlides[currentPSlideIndex].style.opacity = '0';
+            
+            currentPSlideIndex = index;
+
+            if (currentPSlideIndex < 0) currentPSlideIndex = pSlides.length - 1;
+            if (currentPSlideIndex >= pSlides.length) currentPSlideIndex = 0;
+
+            pSlides[currentPSlideIndex].classList.add('p-slide-active');
+            pSlides[currentPSlideIndex].style.opacity = '1';
+        };
+
+        const nextPSlide = () => goToPSlide(currentPSlideIndex + 1);
+        const prevPSlide = () => goToPSlide(currentPSlideIndex - 1);
+
+        const startPSlider = () => {
+            clearInterval(pSlideInterval);
+            pSlideInterval = setInterval(nextPSlide, 4000); // 4 seconds
+        };
+
+        if (pBtnNext) {
+            pBtnNext.addEventListener('click', (e) => {
+                e.preventDefault();
+                nextPSlide();
+                startPSlider();
+            });
+        }
+
+        if (pBtnPrev) {
+            pBtnPrev.addEventListener('click', (e) => {
+                e.preventDefault();
+                prevPSlide();
+                startPSlider();
+            });
+        }
+
+        startPSlider(); // Start the loop immediately
+    }
 });
