@@ -568,8 +568,8 @@ a:hover {
         justify-content: flex-end;
     }
 
-    .nav-links a {
-        display: none; /* Desktop links remain hidden */
+    .nav-links > a {
+        display: none; /* Only hide direct top-level links */
     }
 
     .logo {
