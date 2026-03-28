@@ -586,3 +586,71 @@ a:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 500px;
+    margin: 4rem auto 0;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    color: var(--clr-text-secondary);
+    opacity: 0.7;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 1rem 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--clr-text-primary);
+    transition: border-color 0.3s ease;
+    outline: none;
+    border-radius: 0; /* Reset for iOS */
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-bottom-color: var(--clr-text-primary);
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: transparent;
+    border: 1px solid var(--clr-text-primary);
+    color: var(--clr-text-primary);
+    padding: 1rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 0; /* Match design system */
+}
+
+.btn-submit:hover {
+    background-color: var(--clr-text-primary);
+    color: var(--clr-bg-primary);
+}

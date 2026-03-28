@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printed Portfolio | Zeynep Su Öncel</title>
+    <meta name="description" content="Zeynep Su Öncel - Printed Portfolio. Physical portfolio presentation and details.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" sizes="any">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="index_en.html" class="logo">ZSÖ</a>
+            <div class="nav-links">
+                <a href="about_en.html">About</a>
+                <a href="projects_en.html">Work</a>
+                <a href="printed_portfolio_en.html" class="active">Printed Portfolio</a>
+                <a href="contact_en.html">Contacts</a>
+                <div class="lang-toggle" style="margin-left: 1.5rem; border-left: 1px solid rgba(0,0,0,0.2); padding-left: 1.5rem; display: inline-flex; align-items: center;">
+                    <a href="printed_portfolio.html" style="opacity: 0.5; font-size: 0.8rem; letter-spacing: 1px;">TR</a>
+                    <span style="opacity: 0.3; margin: 0 0.5rem;">/</span>
+                    <span style="font-weight: 500; font-size: 0.8rem; letter-spacing: 1px;">EN</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Printed Portfolio Section -->
+        <section id="printed-portfolio" class="section" style="padding: 0; position: relative; overflow: hidden; height: 100vh; display: flex; align-items: center; justify-content: center; background-color: var(--clr-bg-secondary);">
+            
+            <h2 class="fade-in-scroll" style="position: absolute; bottom: 4rem; left: 50%; transform: translateX(-50%); z-index: 10; font-size: 0.9rem; font-weight: 300; letter-spacing: 3px; text-transform: uppercase; color: var(--clr-bg-primary);">Printed Portfolio</h2>
+            
+            <div class="printed-slider-container fade-in-scroll" style="position: absolute; top:0; left:0; width: 100%; height: 100%;">
+                <div class="p-slide p-slide-active" style="background-image: url('assets/printed_1.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; position: absolute; top:0; left:0; width:100%; height:100%; opacity: 1; transition: opacity 1s ease-in-out;"></div>
+                <div class="p-slide" style="background-image: url('assets/printed_2.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; position: absolute; top:0; left:0; width:100%; height:100%; opacity: 0; transition: opacity 1s ease-in-out;"></div>
+                <div class="p-slide" style="background-image: url('assets/printed_mid.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; position: absolute; top:0; left:0; width:100%; height:100%; opacity: 0; transition: opacity 1s ease-in-out;"></div>
+                <div class="p-slide" style="background-image: url('assets/printed_half.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; position: absolute; top:0; left:0; width:100%; height:100%; opacity: 0; transition: opacity 1s ease-in-out;"></div>
+                <div class="p-slide" style="background-image: url('assets/printed_brownish.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; position: absolute; top:0; left:0; width:100%; height:100%; opacity: 0; transition: opacity 1s ease-in-out;"></div>
+                
+                <div class="slider-controls" style="position: absolute; width: 100%; height: 100%; display: flex; align-items: center; justify-content: space-between; padding: 0 4%; z-index: 3; pointer-events: none;">
+                    <button id="p-slider-prev" style="pointer-events: auto; background: transparent; border: none; color: var(--clr-bg-primary); cursor: pointer; opacity: 0.6; transition: opacity 0.3s, transform 0.3s; padding: 1rem; outline: none;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button id="p-slider-next" style="pointer-events: auto; background: transparent; border: none; color: var(--clr-bg-primary); cursor: pointer; opacity: 0.6; transition: opacity 0.3s, transform 0.3s; padding: 1rem; outline: none;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer fade-in-scroll">
+        <div class="section-container">
+            <p>&copy; 2026 Zeynep Su Öncel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
