@@ -161,7 +161,15 @@
 
             <div class="nav-links">
                 <a href="about_en.html">About</a>
-                <a href="projects_en.html">Work</a>
+                <div class="nav-item-dropdown">
+                    <a href="projects_en.html">Work</a>
+                    <div class="dropdown-menu">
+                        <a href="projects_en.html?type=residential">Residential Design</a>
+                        <a href="projects_en.html?type=retail">Retail Design</a>
+                        <a href="projects_en.html?type=furniture">Furniture Design</a>
+                        <a href="projects_en.html?type=objects">Objects</a>
+                    </div>
+                </div>
                 <a href="printed_portfolio_en.html">Printed Portfolio</a>
                 <a href="contact_en.html">Contacts</a>
                 <div class="lang-toggle" style="margin-left: 1.5rem; border-left: 1px solid rgba(0,0,0,0.2); padding-left: 1.5rem; display: inline-flex; align-items: center;">
@@ -175,7 +183,13 @@
             <div class="mobile-nav" id="mobile-nav">
                 <a href="index_en.html">Home</a>
                 <a href="about_en.html">About</a>
-                <a href="projects_en.html">Work</a>
+                <a href="projects_en.html">All Work</a>
+                <div style="padding-left: 1.5rem; display: flex; flex-direction: column; gap: 1rem; margin-top: -0.5rem; margin-bottom: 0.5rem;">
+                    <a href="projects_en.html?type=residential" style="font-size: 0.85rem; opacity: 0.7;">— Residential Design</a>
+                    <a href="projects_en.html?type=retail" style="font-size: 0.85rem; opacity: 0.7;">— Retail Design</a>
+                    <a href="projects_en.html?type=furniture" style="font-size: 0.85rem; opacity: 0.7;">— Furniture Design</a>
+                    <a href="projects_en.html?type=objects" style="font-size: 0.85rem; opacity: 0.7;">— Objects</a>
+                </div>
                 <a href="printed_portfolio_en.html">Printed Portfolio</a>
                 <a href="contact_en.html">Contacts</a>
             </div>
@@ -226,7 +240,7 @@
             </div>
 
             <div style="text-align: center;">
-                <a href="index_en.html#projects" class="back-link">← Back to Projects</a>
+                <a href="projects_en.html" class="back-link">← Back to Projects</a>
             </div>
         </section>
     </main>

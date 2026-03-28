@@ -185,6 +185,60 @@ a:hover {
 .nav-links {
     display: flex;
     gap: 2rem;
+    align-items: center; /* Ensure alignment with logo */
+}
+
+/* Nav Dropdown Logic */
+.nav-item-dropdown {
+    position: relative;
+    padding-bottom: 0.5rem; /* Better hover area */
+    margin-bottom: -0.5rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: rgba(247, 245, 240, 0.98);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(51, 28, 15, 0.05);
+    padding: 1rem 1.5rem;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    font-size: 0.8rem !important;
+    padding: 0.6rem 0;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    color: var(--clr-text-secondary);
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a::after {
+    display: none !important; /* Remove individual underlines in dropdown */
+}
+
+.dropdown-menu a:hover {
+    color: var(--clr-accent-walnut) !important;
+    padding-left: 5px; /* Subtle interaction */
+    transition: all 0.3s ease;
 }
 
 .nav-links a {
@@ -356,6 +410,20 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: var(--spacing-md);
+    transition: opacity 0.3s ease;
+}
+
+/* Pre-emptive hide during filtering to prevent flicker */
+[data-filtering="true"] .projects-grid {
+    opacity: 0;
+}
+
+[data-filtering="true"] .project-link {
+    display: none !important;
+}
+
+[data-filtering="true"] .project-link.visible {
+    display: block !important;
 }
 
 .project-card {
@@ -415,6 +483,40 @@ a:hover {
     color: var(--clr-text-secondary);
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* Project Filtration Classes */
+.projects-grid .project-link {
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: block;
+}
+
+.projects-grid .project-link.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    visibility: hidden;
+    position: absolute; /* Remove from flow to avoid gaps */
+    pointer-events: none;
+}
+
+.projects-grid .project-link.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    position: relative;
+    pointer-events: auto;
+    animation: fadeInReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes fadeInReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Experience Timeline */

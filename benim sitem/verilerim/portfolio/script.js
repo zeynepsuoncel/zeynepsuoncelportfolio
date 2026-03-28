@@ -183,4 +183,72 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Projects Filtering Logic
+    const filterProjects = () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const typology = urlParams.get('type');
+        const projectLinks = document.querySelectorAll('.project-link');
+        const projectsGrid = document.querySelector('.projects-grid');
+        
+        if (!projectLinks.length) return;
+
+        // Apply filtering logic
+        let visibleCount = 0;
+        projectLinks.forEach(link => {
+            const projectType = link.getAttribute('data-type');
+            
+            if (!typology || typology === 'all' || projectType === typology) {
+                link.classList.remove('hidden');
+                link.classList.add('visible');
+                
+                // Add staggered delay for the "Norm" feel
+                link.style.animationDelay = `${visibleCount * 0.1}s`;
+                visibleCount++;
+
+                // Ensure article inside is visible for observer
+                const article = link.querySelector('article');
+                if (article) article.classList.add('visible');
+            } else {
+                link.classList.remove('visible');
+                link.classList.add('hidden');
+                link.style.animationDelay = '0s';
+            }
+        });
+
+        // Small delay before removing the filtering state to let elements align
+        // and allow the CSS transition to play out smoothly
+        setTimeout(() => {
+            document.documentElement.removeAttribute('data-filtering');
+            if (projectsGrid) projectsGrid.style.opacity = '1';
+        }, 50);
+    };
+
+    // Run filter on load
+    filterProjects();
+
+    // Re-run filter when URL changes (for navigation within the same page)
+    window.addEventListener('popstate', () => {
+        // When using popstate (back/forward), we might want to re-apply the filtering state
+        // for a split second to avoid flicker if the browser doesn't handle the DOM swap instantly
+        document.documentElement.setAttribute('data-filtering', 'true');
+        filterProjects();
+    });
+    
+    // Add logic to handle typology clicks without full page reloads if on projects page
+    document.querySelectorAll('.dropdown-menu a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href.startsWith('projects') && window.location.pathname.includes('projects')) {
+                const targetType = new URLSearchParams(href.split('?')[1]).get('type');
+                const currentUrl = new URL(window.location);
+                currentUrl.searchParams.set('type', targetType || 'all');
+                window.history.pushState({}, '', currentUrl);
+                filterProjects();
+                
+                // Close mobile menu if open
+                if (mobileNav) mobileNav.classList.remove('active');
+            }
+        });
+    });
 });
