@@ -138,6 +138,41 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 101;
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-bg-primary);
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    flex-direction: column;
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    pointer-events: none;
+    z-index: 99;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mobile-nav.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.mobile-nav a {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
 }
 
 .logo {
@@ -528,8 +563,31 @@ a:hover {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .nav-links {
-        display: none;
-        /* simple hidden nav for mobile for minimal implementation */
+        display: flex; /* Changed from none to show toggle */
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .nav-links a {
+        display: none; /* Desktop links remain hidden */
+    }
+
+    .logo {
+        cursor: pointer;
+    }
+
+    .lang-toggle {
+        margin-left: 0 !important;
+        border-left: none !important;
+        padding-left: 0 !important;
+        display: inline-flex !important; /* Ensure visibility */
+    }
+
+    .lang-toggle a, 
+    .lang-toggle span {
+        font-weight: 200 !important;
+        font-size: 0.75rem !important;
+        letter-spacing: 1px !important;
     }
 
     .about-grid,

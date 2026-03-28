@@ -153,4 +153,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
         startPSlider(); // Start the loop immediately
     }
+    // Mobile Menu Toggle
+    const logo = document.querySelector('.logo');
+    const mobileNav = document.getElementById('mobile-nav');
+    
+    if (logo && mobileNav) {
+        logo.addEventListener('click', (e) => {
+            // Check for mobile width
+            const isMobile = window.innerWidth <= 768;
+            
+            if (isMobile) {
+                e.preventDefault();
+                mobileNav.classList.toggle('active');
+            }
+        });
+
+        // Close menu when clicking any mobile link
+        const mobileLinks = mobileNav.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!logo.contains(e.target) && !mobileNav.contains(e.target) && mobileNav.classList.contains('active')) {
+                mobileNav.classList.remove('active');
+            }
+        });
+    }
 });

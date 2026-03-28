@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,8 @@
 <body>
     <nav class="navbar" id="navbar">
         <div class="nav-content">
-            <a href="#" class="logo">ZSÖ</a>
+            <a href="index_en.html" class="logo">ZSÖ</a>
+
             <div class="nav-links">
                 <a href="about_en.html">About</a>
                 <a href="projects_en.html">Work</a>
@@ -26,6 +27,14 @@
                     <span style="opacity: 0.3; margin: 0 0.5rem;">/</span>
                     <span style="font-weight: 500; font-size: 0.8rem; letter-spacing: 1px;">EN</span>
                 </div>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div class="mobile-nav" id="mobile-nav">
+                <a href="about_en.html">About</a>
+                <a href="projects_en.html">Work</a>
+                <a href="printed_portfolio_en.html">Printed Portfolio</a>
+                <a href="contact_en.html">Contacts</a>
             </div>
         </div>
     </nav>
@@ -165,9 +174,25 @@
                 <a href="mailto:zeynepsuoncel@gmail.com" class="contact-email fade-in-scroll">zeynepsuoncel@gmail.com</a>
                 
                 <div class="tags" style="justify-content: center;">
-                    <a href="#" class="tag fade-in-scroll delay-1">LinkedIn</a>
-                    <a href="#" class="tag fade-in-scroll delay-2">Behance</a>
+                    <a href="https://www.linkedin.com/in/zeynep-su-öncel-891084265" target="_blank" rel="noopener noreferrer" class="tag fade-in-scroll delay-1">LinkedIn</a>
+                    <a href="https://www.behance.net/zeynepsuncel1" target="_blank" rel="noopener noreferrer" class="tag fade-in-scroll delay-2">Behance</a>
                 </div>
+
+                <form action="https://formspree.io/f/xpqoqjvk" method="POST" class="contact-form fade-in-scroll">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea id="message" name="message" class="form-textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
